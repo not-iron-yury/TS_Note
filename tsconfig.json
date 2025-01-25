@@ -8,19 +8,6 @@
     "alwaysStrict": true,
     "allowUnreachableCode": false
   },
-  "include": ["src/typescript/*.ts"],
+  "include": ["src/typescript/**/*.ts"],
   "exclude": ["node_modules"]
 }
-
-// {
-//   "files": ["src/script.ts"],
-//   "compilerOptions": {
-//     "target": "ES2024",
-//     "removeComments": false,
-//     "outDir": "src/javascript",
-//     "sourceMap": true,
-//     "noEmitOnError": true,
-//     "alwaysStrict": true,
-//     "allowUnreachableCode": false
-//   }
-// }
