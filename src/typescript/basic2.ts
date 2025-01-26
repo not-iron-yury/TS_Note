@@ -61,30 +61,3 @@ let notSure: any = false; // boolean
 notSure = true; // boolean
 notSure = 90; // number
 notSure = 'Ass'; // string
-
-/* -------------------------------------------- */
-// Type
-
-// Позволяет создавать новые имена для существующих типов, объединять их,
-// и создавать сложные конструкции с помощью операторов объединения (|) и пересечения (&).
-// Используется если требуется работать с различными типами данных или создавать сложные комбинации типов.
-
-// Простой тип:
-type MyString = string;
-
-// Объединение типов:
-type StringOrNumber = string | number;
-
-let userId: StringOrNumber; // декларирование кастомного типа
-
-userId = '90';
-userId = 10;
-
-// Создание сложных типов:
-type Pers = {
-  name: string;
-  age: number;
-};
-
-//Расширение существующего типа:
-type ExtendedPerson = Pers & { job: string };

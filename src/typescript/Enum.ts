@@ -44,7 +44,7 @@ Direction_3[10]; // "Left"
 Direction_3[11]; // "Right"
 
 /* -------------------------------------------- */
-// ПРИМЕРЫ:
+// ПРИМЕР
 
 enum links {
   youtube = 'https://www.youtube.com/',
@@ -56,6 +56,24 @@ links.vk; // 'https://vk.com/'
 links.github; // 'https://github.com/'
 
 /* -------------------------------------------- */
+// ЕЩЕ ПРИМЕР
+
+enum Roles {
+  ADMIN,
+  GUEST,
+  USER,
+}
+
+interface UserR {
+  role: Roles;
+}
+
+const userR: UserR = {
+  role: Roles.ADMIN,
+};
+
+/* -------------------------------------------- */
+// ENUM CONST
 
 const enum links_2 {
   github = 'https://github.com/',
@@ -67,7 +85,7 @@ const enum links_2 {
 // если нет обращений к свойствам enum, то он не будет компилироваться в js
 // enum links_2 скомпилирован не будет
 
-/* -------------------------------------------- */
+/* ---------------------- */
 
 const enum links_3 {
   vk = 'https://vk.com/',
@@ -79,3 +97,5 @@ const arrLinks = [links_3.vk, links_3.github];
 // при таком обращении к свойствам, enum так же скомпилирован не будет
 // скомпилируется только массив
 // ["https://vk.com/" /* links_3.vk */, "https://github.com/" /* links_3.github */]
+
+/* -------------------------------------------- */
