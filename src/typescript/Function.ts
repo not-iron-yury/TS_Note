@@ -75,3 +75,32 @@ const greetUser1 = (): void => {
 function greetUser2(): void {
   console.log('Nice ass!');
 }
+
+/* -------------------------------------------- */
+
+// Перегрузка функций
+// позволяет одной функции обрабатывать разные типы данных или разное количество аргументов
+
+// Пример 1: Разные типы и количество аргументов
+function add(a: number, b: number, c: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any, c?: any): any {
+  return a + b + c;
+}
+
+console.log(add(1, 2, 3)); // 6
+console.log(add('hello', ' world')); // "hello world"
+
+/* ---------------------- */
+
+// Пример 2: Разные типы и количество аргументов
+function getCar(name: string): string;
+function getCar(name: string, price: number): string;
+function getCar(name: string, price?: number): string {
+  return price ? `Название ${name}, цена ${price}` : `Название ${name}`;
+}
+
+console.log(getCar('toyota')); // "Название toyota"
+console.log(getCar('toyota', 300)); // "Название toyota, цена 300"
+
+/* -------------------------------------------- */
